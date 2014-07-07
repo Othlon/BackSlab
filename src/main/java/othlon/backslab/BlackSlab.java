@@ -20,8 +20,11 @@ public class BlackSlab {
     {
 
         BSConfig.configurating(event.getSuggestedConfigurationFile());
-        othlon.backslab.vanilla.BSVanilla.SetVanilla(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
+        othlon.backslab.vanilla.BSVanilla.SetUp(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
 
+        if(BSConfig.canBackSlabBOP){
+            othlon.backslab.bop.BSBoP.SetUp();
+        }
     }//end pre init
 
 }

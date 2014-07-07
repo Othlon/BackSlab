@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 public class BSVanilla {
 
 
-    public static void SetVanilla(boolean okStone, boolean okWood) {
+    public static void SetUp(boolean okStone, boolean okWood) {
 
        if(okStone) {
            Block[] stoneResults = {Blocks.stone,
