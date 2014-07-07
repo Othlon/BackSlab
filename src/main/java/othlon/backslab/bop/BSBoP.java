@@ -1,6 +1,7 @@
 package othlon.backslab.bop;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 public class BSBoP {
@@ -16,11 +17,9 @@ public class BSBoP {
         for(int i = 0; i < woodTypes.length; i++ )
         {
 
-            ItemStack woodSlab  = new ItemStack (GameRegistry.findBlock("BiomesOPlenty:", woodTypes[i]));
-
-           System.out.print(woodSlab.toString());
-           // ItemStack woodBlock = new ItemStack(Block.getBlockFromName("biomesoplenty:"+woodTypes[i]+"Plank"));
-           // GameRegistry.addShapelessRecipe(woodBlock, woodSlab, woodSlab);
+            ItemStack woodSlab  = new ItemStack(Block.getBlockFromName("biomesoplenty:"+woodTypes[i]+"Slab"));
+            ItemStack woodBlock = new ItemStack(Block.getBlockFromName("biomesoplenty:"+woodTypes[i]+"Plank"));
+            GameRegistry.addShapelessRecipe(woodBlock, woodSlab, woodSlab);
 
         }
 

@@ -37,7 +37,7 @@ public class BSVanilla {
             //WOODEN SLAB BACK
             for (int i = 0; i < 6; i++) {
 
-                ItemStack woodSlab = new ItemStack(Blocks.wooden_slab, 1, i);
+                ItemStack woodSlab  = new ItemStack(Blocks.wooden_slab, 1, i);
                 ItemStack woodBlock = new ItemStack(Blocks.planks, 1, i);
                 GameRegistry.addShapelessRecipe(woodBlock, woodSlab, woodSlab);
             }
