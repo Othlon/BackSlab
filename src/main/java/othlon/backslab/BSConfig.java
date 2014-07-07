@@ -1,6 +1,5 @@
 package othlon.backslab;
 
-import cpw.mods.fml.common.Loader;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -27,11 +26,8 @@ public class BSConfig {
 
         canBackSlabVanilla  = config.get("Vanilla BackSlab","",true,"").getBoolean(true);
 
-        if(Loader.isModLoaded("BiomesOPlenty"))
-        {
-            canBackSlabBOP = config.get("Biomes O Plenty BackSlab","",true,"").getBoolean(true);
 
-        }
+       canBackSlabBOP = config.get("Biomes O Plenty BackSlab", "", true, "").getBoolean(true);
 
 
 

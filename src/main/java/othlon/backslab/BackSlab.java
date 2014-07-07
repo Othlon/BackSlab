@@ -8,8 +8,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  */
 
 
-@Mod(modid = BlackSlab.MODID, name = BlackSlab.MODNAME, version = BlackSlab.VERSION )
-public class BlackSlab {
+@Mod(modid = BackSlab.MODID, name = BackSlab.MODNAME, version = BackSlab.VERSION )
+public class BackSlab {
 
     public static final String MODID   = "backslab";
     public static final String MODNAME = "backslab";
@@ -21,10 +21,7 @@ public class BlackSlab {
 
         BSConfig.configurating(event.getSuggestedConfigurationFile());
         othlon.backslab.vanilla.BSVanilla.SetUp(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
-
-        if(BSConfig.canBackSlabBOP){
-            othlon.backslab.bop.BSBoP.SetUp();
-        }
+        othlon.backslab.bop.BSBoP.SetUp();
     }//end pre init
 
 }
