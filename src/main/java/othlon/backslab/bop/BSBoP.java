@@ -17,9 +17,9 @@ public class BSBoP {
         for(int i = 0; i < woodTypes.length; i++ )
         {
 
-            ItemStack woodSlab  = new ItemStack(Block.getBlockFromName("biomesoplenty:"+woodTypes[i]+"Slab"));
-            ItemStack woodBlock = new ItemStack(Block.getBlockFromName("biomesoplenty:"+woodTypes[i]+"Plank"));
-            GameRegistry.addShapelessRecipe(woodBlock, woodSlab, woodSlab);
+            ItemStack woodSlab  = new ItemStack(Block.getBlockFromName("BiomesOPlenty:"+woodTypes[i]+"Slab"));
+            ItemStack woodPlank = new ItemStack(Block.getBlockFromName("BiomesOPlenty:"+woodTypes[i]+"Plank"));
+            GameRegistry.addShapelessRecipe(woodPlank, woodSlab, woodSlab);
 
         }
 
