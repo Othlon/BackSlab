@@ -1,6 +1,7 @@
 package othlon.backslab;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import othlon.backslab.bop.BSBoP;
 import othlon.backslab.vanilla.BSVanilla;
@@ -10,7 +11,7 @@ import othlon.backslab.vanilla.BSVanilla;
  */
 
 
-@Mod(modid = BackSlab.MODID, name = BackSlab.MODNAME, version = BackSlab.VERSION )
+@Mod(modid = BackSlab.MODID, name = BackSlab.MODNAME, version = BackSlab.VERSION, dependencies = "after:BiomesOPlenty")
 public class BackSlab {
 
     public static final String MODID   = "backslab";
@@ -22,8 +23,15 @@ public class BackSlab {
     {
 
         BSConfig.configurating(event.getSuggestedConfigurationFile());
+
+    }//end pre init
+
+
+    @Mod.EventHandler
+    public static void postInit(FMLPostInitializationEvent event){
         BSVanilla.SetUp(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
         BSBoP.SetUp();
-    }//end pre init
+    }//post init
+
 
 }
