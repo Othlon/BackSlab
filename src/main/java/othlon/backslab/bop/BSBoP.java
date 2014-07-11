@@ -23,6 +23,9 @@ public class BSBoP {
             }
 
             ItemStack woodPlank = new ItemStack(GameData.getBlockRegistry().getObject("BiomesOPlenty:"+woodTypes[i]+"Plank"));
+            if(woodPlank.getItem() == null) {
+                System.out.println("double butts" );
+            }
             GameRegistry.addShapelessRecipe(woodPlank, woodSlab, woodSlab);
 
         }

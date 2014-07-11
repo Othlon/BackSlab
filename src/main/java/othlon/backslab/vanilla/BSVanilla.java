@@ -5,10 +5,6 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
-
-/**
- * Created by Jen on 30/06/2014.
- */
 public class BSVanilla {
 
 
@@ -39,7 +35,9 @@ public class BSVanilla {
 
                 ItemStack woodSlab  = new ItemStack(Blocks.wooden_slab, 1, i);
                 ItemStack woodBlock = new ItemStack(Blocks.planks, 1, i);
+
                 GameRegistry.addShapelessRecipe(woodBlock, woodSlab, woodSlab);
+
             }
         }
 
