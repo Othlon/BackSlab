@@ -2,6 +2,8 @@ package othlon.backslab;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import othlon.backslab.bop.BSBoP;
+import othlon.backslab.vanilla.BSVanilla;
 
 /**
  * Created by jen on 4/07/2014.
@@ -20,8 +22,8 @@ public class BackSlab {
     {
 
         BSConfig.configurating(event.getSuggestedConfigurationFile());
-        othlon.backslab.vanilla.BSVanilla.SetUp(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
-        othlon.backslab.bop.BSBoP.SetUp();
+        BSVanilla.SetUp(BSConfig.canBackSlabVanilla, BSConfig.canBackSlabVanilla);
+        BSBoP.SetUp();
     }//end pre init
 
 }
